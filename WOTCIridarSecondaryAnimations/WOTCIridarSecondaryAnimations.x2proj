@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Default" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Guid>514e474e-c161-4cc7-a25c-72fcbf82d20f</Guid>
+    <Name>WOTCIridarSecondaryAnimations</Name>
+    <Description>Contains animations and critical code that allows using secondary weapons as primaries and to dual wield them.</Description>
+    <SteamPublishID>0</SteamPublishID>
+    <AssemblyName>WOTCIridarSecondaryAnimations</AssemblyName>
+    <RootNamespace>WOTCIridarSecondaryAnimations</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="Config\" />
+    <Folder Include="ContentForCook\DualPistols" />
+    <Folder Include="ContentForCook\DualMelee" />
+    <Folder Include="Localization\" />
+    <Folder Include="ContentForCook" />
+    <Folder Include="Src\" />
+    <Folder Include="Src\DualWieldedPistols" />
+    <Folder Include="Src\DualWieldedPistols\Classes" />
+    <Folder Include="Src\WOTCIridarSecondaryAnimations\" />
+    <Folder Include="Src\WOTCIridarSecondaryAnimations\Classes\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ContentForCook\DualPistols\Armory_DualPistols.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ContentForCook\DualPistols\Photobooth_DualPistols.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ContentForCook\DualPistols\Shell_DualPistols.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ContentForCook\DualPistols\Skyranger_DualPistols.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ContentForCook\DualPistols\WP_OffhandPistol_CV.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ContentOptions.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ReadMe.txt" />
+    <Content Include="ModPreview.jpg" />
+    <Content Include="Config\XComEditor.ini" />
+    <Content Include="Config\XComEngine.ini" />
+    <Content Include="Config\XComGame.ini" />
+    <Content Include="Localization\XComGame.int" />
+    <Content Include="Src\DualWieldedPistols\Classes\AnimNotify_FireOtherWeapon.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\WOTCIridarSecondaryAnimations\Classes\X2DLCInfo_WOTCIridarSecondaryAnimations.uc" />
+  </ItemGroup>
+  <PropertyGroup>
+    <SolutionRoot>$(MSBuildProjectDirectory)\..\</SolutionRoot>
+    <ScriptsDir>$(SolutionRoot).scripts\</ScriptsDir>
+    <BuildCommonRoot>$(ScriptsDir)X2ModBuildCommon\</BuildCommonRoot>
+  </PropertyGroup>
+  <Import Project="$(BuildCommonRoot)XCOM2.targets" />
+</Project>
